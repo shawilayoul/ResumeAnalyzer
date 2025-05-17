@@ -1,23 +1,25 @@
-#  AI-Powered Resume Analyzer (Spring Boot + OpenAI)
-AI-Powered Resume Analyzer is a Spring Boot web application that allows users to upload resumes (PDF/DOCX), 
+# 🎯 AI-Powered Resume Analyzer (Spring Boot + OpenAI)
+
+AI-Powered Resume Analyzer is a Spring Boot web application that allows users to upload resumes (PDF/DOCX),
 extracts the content using Apache Tika, and analyzes it using OpenAI's GPT to provide intelligent feedback.
-##  What This Project Showcases
--  Text Extraction: Resume parsing using Apache Tika (PDF, DOCX, etc.)
 
--  AI Integration: Resume feedback from OpenAI's GPT API (via WebClient)
+## 🚀 What This Project Showcases
+- 🔍 Text Extraction: Resume parsing using Apache Tika (PDF, DOCX, etc.)
 
--  Security: JWT-based authentication for protected endpoints
+- 🤖 AI Integration: Resume feedback from OpenAI's GPT API (via WebClient)
 
--  Clean Architecture: DTOs, MapStruct mappers, layered services
+- 🔐 Security: JWT-based authentication for protected endpoints
 
--  Testing: Unit tests for service/controller with JUnit, Mockito, MockMvc
+- 🧱 Clean Architecture: DTOs, MapStruct mappers, layered services
 
--  Spring Boot: REST APIs, exception handling, validation
+- 🧪 Testing: Unit tests for service/controller with JUnit, Mockito, MockMvc
 
--  Docker: Containerized Spring Boot API for easy deployment
+- 📦 Spring Boot: REST APIs, exception handling, validation
 
-##  Why I Built It
-- I wanted to demonstrate how I can:
+- 🐳  Docker: Containerized Spring Boot API for easy deployment
+
+## 👨‍💻 Why I Built It
+# wanted to demonstrate how I can:
 
 - Integrate external APIs like OpenAI with real user input
 
@@ -25,7 +27,7 @@ extracts the content using Apache Tika, and analyzes it using OpenAI's GPT to pr
 
 - Write testable, modular code ready for real-world production
 
-##  Tech Stack
+## 🧰 Tech Stack
 - Angular
 - Java
 - Spring Boot
@@ -37,11 +39,11 @@ extracts the content using Apache Tika, and analyzes it using OpenAI's GPT to pr
 - PostgreSQL
 - Docker
 
-## API Endpoints
+## 📬 API Endpoints
 Check them out at:  
 👉 `http://localhost:8080/swagger-ui.html`
 
-##  Setup
+## 🔧 Setup
 
 ```bash
 # clone & run
