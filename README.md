@@ -1,17 +1,33 @@
-# 🎯 AI-Powered Resume Analyzer (Spring Boot + OpenAI)
+#  AI-Powered Resume Analyzer (Spring Boot + OpenAI)
+AI-Powered Resume Analyzer is a Spring Boot web application that allows users to upload resumes (PDF/DOCX), 
+extracts the content using Apache Tika, and analyzes it using OpenAI's GPT to provide intelligent feedback.
+##  What This Project Showcases
+-  Text Extraction: Resume parsing using Apache Tika (PDF, DOCX, etc.)
 
-This project allows users to upload resumes and get instant AI-powered feedback using OpenAI's GPT models.
+-  AI Integration: Resume feedback from OpenAI's GPT API (via WebClient)
 
-## 🚀 Features
-- 🔐 JWT-based authentication
-- 📄 Resume text extraction (PDF, DOCX) via Apache Tika
-- 🤖 AI analysis via OpenAI GPT API
-- 🧾 Clean DTO architecture with MapStruct
-- 📦 RESTful APIs with Swagger UI
-- 🧪 Tested with JUnit, Mockito, MockMvc
+-  Security: JWT-based authentication for protected endpoints
 
-## 🧰 Tech Stack
-## Backend
+-  Clean Architecture: DTOs, MapStruct mappers, layered services
+
+-  Testing: Unit tests for service/controller with JUnit, Mockito, MockMvc
+
+-  Spring Boot: REST APIs, exception handling, validation
+
+-  Docker: Containerized Spring Boot API for easy deployment
+
+##  Why I Built It
+- I wanted to demonstrate how I can:
+
+- Integrate external APIs like OpenAI with real user input
+
+- Work with file uploads, text processing, and secure APIs
+
+- Write testable, modular code ready for real-world production
+
+##  Tech Stack
+- Angular
+- Java
 - Spring Boot
 - OpenAI API
 - Apache Tika
@@ -20,20 +36,16 @@ This project allows users to upload resumes and get instant AI-powered feedback 
 - JWT Auth
 - PostgreSQL
 - Docker
-## Frontend
--Angular
-## 🖼️ Demo
-![Demo screenshot](screenshots/demo.png)
 
-## 📬 API Endpoints
+## API Endpoints
 Check them out at:  
 👉 `http://localhost:8080/swagger-ui.html`
 
-## 🔧 Setup
+##  Setup
 
 ```bash
 # clone & run
-git clone https://github.com/yourname/resume-analyzer.git
+https://github.com/shawilayoul/ResumeAnalyzer.git
 cd resume-analyzer
 ./mvnw spring-boot:run
 #🤝 Contributing
