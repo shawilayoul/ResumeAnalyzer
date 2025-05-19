@@ -1,0 +1,17 @@
+# === Backend ===
+/backend/target/
+/backend/.mvn/
+/backend/.idea/
+
+# === Frontend ===
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.angular/cache/
+
+# === General ===
+*.log
+*.env
+.DS_Store
+.env.local
+.idea/
+.vscode/
