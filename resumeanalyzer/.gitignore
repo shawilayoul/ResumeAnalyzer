@@ -28,6 +28,10 @@ target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
+<<<<<<< HEAD
 src/main/resources/application.properties
+=======
+
+>>>>>>> 03b2b1be01c26a6b4bc5bc4159271f1bb0dc543c
 ### VS Code ###
 .vscode/

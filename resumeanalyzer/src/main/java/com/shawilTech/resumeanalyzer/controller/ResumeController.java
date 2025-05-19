@@ -1,5 +1,6 @@
 package com.shawilTech.resumeanalyzer.controller;
 
+<<<<<<< HEAD
 import com.shawilTech.resumeanalyzer.dto.FileUploadDTO;
 import com.shawilTech.resumeanalyzer.dto.ResumeUploadResponseDTO;
 import com.shawilTech.resumeanalyzer.service.ResumeService;
@@ -35,4 +36,7 @@ public class ResumeController {
             @RequestPart("file") MultipartFile file) throws Exception {
         return ResponseEntity.ok(resumeService.analzeResume(file));
     }
+=======
+public class ResumeController {
+>>>>>>> 03b2b1be01c26a6b4bc5bc4159271f1bb0dc543c
 }

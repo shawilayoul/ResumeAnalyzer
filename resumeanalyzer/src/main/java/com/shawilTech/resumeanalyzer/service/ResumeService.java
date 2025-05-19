@@ -8,9 +8,12 @@ import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+<<<<<<< HEAD
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+=======
+>>>>>>> 03b2b1be01c26a6b4bc5bc4159271f1bb0dc543c
 
 import java.io.IOException;
 
@@ -24,6 +27,7 @@ public class ResumeService {
 
     public ResumeUploadResponseDTO analzeResume(MultipartFile file) throws IOException, TikaException {
         String text = tika.parseToString(file.getInputStream());
+<<<<<<< HEAD
         String feedBackJson = openAIService.analyzeresume(text);
 
         // Parse the JSON response to extract only the assistant message content
@@ -37,6 +41,9 @@ public class ResumeService {
             // fallback if parsing fails
             extractedFeedback = "Unable to parse feedback.";
         }
+=======
+        String feedBack = openAIService.analyzeresume(text);
+>>>>>>> 03b2b1be01c26a6b4bc5bc4159271f1bb0dc543c
 
         Resume resume = Resume.builder()
                 .filename(file.getOriginalFilename())
@@ -48,7 +55,11 @@ public class ResumeService {
         return  ResumeUploadResponseDTO.builder()
                 .resumeId(resume.getId())
                 .filename(resume.getFilename())
+<<<<<<< HEAD
                 .feedback(extractedFeedback)
+=======
+                .feedback(feedBack)
+>>>>>>> 03b2b1be01c26a6b4bc5bc4159271f1bb0dc543c
                 .build();
     }
 }
