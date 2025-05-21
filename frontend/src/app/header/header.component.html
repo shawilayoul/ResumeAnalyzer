@@ -1,0 +1,31 @@
+<mat-toolbar color="primary" class="header">
+  <div class="header-content">
+    <button mat-icon-button aria-label="Menu" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    
+    <a routerLink="/" class="brand">
+      <mat-icon class="brand-icon">description</mat-icon>
+      <span class="brand-text">Resume Analyzer</span>
+    </a>
+
+    <nav class="nav-links">
+      <!-- Fixed typo in "/analzer" to "/analyzer" -->
+      <a mat-button routerLink="/analyzer" class="nav-link">Analyze</a>
+      <a mat-button routerLink="/history" class="nav-link">History</a>
+      <a mat-button routerLink="/about" class="nav-link">About</a>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <!-- Fixed icon typo: "acount_circle" to "account_circle" -->
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #profileMenu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
