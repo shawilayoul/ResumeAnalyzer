@@ -1,31 +1,26 @@
-<mat-toolbar color="primary" class="header">
-  <div class="header-content">
-    <button mat-icon-button aria-label="Menu" class="menu-button">
-      <mat-icon>menu</mat-icon>
-    </button>
-    
-    <a routerLink="/" class="brand">
-      <mat-icon class="brand-icon">description</mat-icon>
-      <span class="brand-text">Resume Analyzer</span>
-    </a>
+<mat-toolbar color="primary" class="toolbar">
+  <button mat-icon-button class="menu-btn" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
 
-    <nav class="nav-links">
-      <!-- Fixed typo in "/analzer" to "/analyzer" -->
-      <a mat-button routerLink="/analyzer" class="nav-link">Analyze</a>
-      <a mat-button routerLink="/history" class="nav-link">History</a>
-      <a mat-button routerLink="/about" class="nav-link">About</a>
-    </nav>
+  <span class="logo">Resume Analyzer</span>
+  <span class="spacer"></span>
 
-    <div class="spacer"></div>
-
-    <!-- Fixed icon typo: "acount_circle" to "account_circle" -->
-    <button mat-icon-button [matMenuTriggerFor]="profileMenu">
-      <mat-icon>account_circle</mat-icon>
-    </button>
-    <mat-menu #profileMenu="matMenu">
-      <button mat-menu-item>Profile</button>
-      <button mat-menu-item>Settings</button>
-      <button mat-menu-item>Logout</button>
-    </mat-menu>
-  </div>
+  <!-- Desktop nav -->
+  <nav class="nav-links">
+    <a mat-button routerLink="/">Home</a>
+    <a mat-button routerLink="/templates">Templates</a>
+    <a mat-button routerLink="/about">About</a>
+    <a mat-button routerLink="/contact">Contact</a>
+    <a mat-button routerLink="/login">Login</a>
+  </nav>
 </mat-toolbar>
+
+<!-- Mobile dropdown menu -->
+<div class="mobile-menu" *ngIf="isOpen">
+  <a mat-list-item routerLink="/" (click)="closeMenu()">Home</a>
+  <a mat-list-item routerLink="/templates" (click)="closeMenu()">Templates</a>
+  <a mat-list-item routerLink="/about" (click)="closeMenu()">About</a>
+  <a mat-list-item routerLink="/contact" (click)="closeMenu()">Contact</a>
+  <a mat-list-item routerLink="/login" (click)="closeMenu()">Login</a>
+</div>

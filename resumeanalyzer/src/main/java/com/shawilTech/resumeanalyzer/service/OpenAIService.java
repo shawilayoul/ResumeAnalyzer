@@ -16,7 +16,7 @@ public class OpenAIService {
 
         // Load .env file
         Dotenv dotenv = Dotenv.load();
-        this.apiKey = dotenv.get("OPENAI_API_KEY"); // Match your .env variable name
+        this.apiKey = dotenv.get("OPENAI_API_KEY");
 
         // Validate key
         if (apiKey == null || apiKey.isBlank()) {
@@ -27,7 +27,7 @@ public class OpenAIService {
     public String analyzeresume(String text) {
 
         Map<String, Object> requestBody = Map.of(
-                "model", "gpt-3.5-turbo", // Valid model
+                "model", "gpt-4o-mini",
                 "messages", List.of(
                         Map.of("role", "user", "content", text)
                 )
@@ -35,7 +35,7 @@ public class OpenAIService {
 
         return webClient.post()
                 .uri("/chat/completions")
-                .header("Authorization", "Bearer " + this.apiKey) // Use .env key
+                .header("Authorization", "Bearer " + this.apiKey)
                 .header("Content-Type", "application/json")
                 .bodyValue(requestBody)
                 .retrieve()

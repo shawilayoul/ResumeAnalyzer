@@ -1,20 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
 import { RouterModule } from '@angular/router';
+import {  MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
-  imports: [MatToolbarModule,MatIconModule, MatButtonModule, MatMenuModule, RouterModule],
+  imports: [  RouterModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    CommonModule
+  ],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  toggleMenu = false
 
-  toggleSidenav(){
-  this.toggleMenu = !this.toggleMenu;
+  isOpen = false;
+
+  toggleMenu() {
+    this.isOpen = !this.isOpen;
   }
-  profileMenu(): any{}
+
+  closeMenu() {
+    this.isOpen = false;
+  }
 }

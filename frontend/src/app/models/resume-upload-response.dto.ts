@@ -1,13 +1,11 @@
-import { User } from "./user.dto";
+import { User } from './user.dto';
 
-export interface ResumeUploadResponseDTO{
+export interface ResumeUploadResponseDTO {
   id: number;
   filename: string;
-  extractedText: string;
-  analysis: string;
-  suggestedJobRoles: string[];
+  feedback: string;
   user: User;
   createdAt: Date;
-  status:  string;
+  status: string;
   message: string;
 }

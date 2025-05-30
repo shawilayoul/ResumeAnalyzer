@@ -10,6 +10,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MarkdownModule } from 'ngx-markdown';
+
 @Component({
   standalone: true,
   selector: 'app-resume-analyzer',
@@ -22,9 +24,10 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatExpansionModule,
     MatDividerModule,
     MatProgressSpinnerModule,
+    MarkdownModule,
   ],
   templateUrl: './resume-analyzer.component.html',
-  styleUrl: './resume-analyzer.component.css',
+  styleUrl: './resume-analyzer.component.scss',
 })
 export class ResumeAnalyzerComponent {
   selectedFile: File | null = null;
@@ -56,6 +59,8 @@ export class ResumeAnalyzerComponent {
       next: (response) => {
         this.uploadResponse = response;
         this.isLoading = false;
+
+        console.log(response)
       },
       error: (err) => {
         this.errorMessage =
@@ -66,8 +71,9 @@ export class ResumeAnalyzerComponent {
   }
 
   clearFile(){
-    
+    this.selectedFile = null;
   }
+
   private isValidFileType(file: File): boolean {
     const allowedTypes = [
       'application/pdf',

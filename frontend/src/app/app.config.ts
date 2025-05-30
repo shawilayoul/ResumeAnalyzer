@@ -7,7 +7,7 @@ import {
 } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
-
+import { provideMarkdown } from 'ngx-markdown';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
@@ -15,7 +15,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideClientHydration(withEventReplay()),
     provideHttpClient(),
-
-     provideAnimations(),
+    provideAnimations(),
+    provideMarkdown(),
   ],
 };
