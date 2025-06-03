@@ -3,13 +3,12 @@
     <mat-icon>menu</mat-icon>
   </button>
 
-  <span class="logo">Resume Analyzer</span>
+  <span class="logo" routerLink="/">Resume Analyzer</span>
   <span class="spacer"></span>
 
   <!-- Desktop nav -->
   <nav class="nav-links">
     <a mat-button routerLink="/">Home</a>
-    <a mat-button routerLink="/templates">Templates</a>
     <a mat-button routerLink="/about">About</a>
     <a mat-button routerLink="/contact">Contact</a>
     <a mat-button routerLink="/login">Login</a>
@@ -19,7 +18,6 @@
 <!-- Mobile dropdown menu -->
 <div class="mobile-menu" *ngIf="isOpen">
   <a mat-list-item routerLink="/" (click)="closeMenu()">Home</a>
-  <a mat-list-item routerLink="/templates" (click)="closeMenu()">Templates</a>
   <a mat-list-item routerLink="/about" (click)="closeMenu()">About</a>
   <a mat-list-item routerLink="/contact" (click)="closeMenu()">Contact</a>
   <a mat-list-item routerLink="/login" (click)="closeMenu()">Login</a>

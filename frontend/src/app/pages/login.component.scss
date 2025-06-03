@@ -1,0 +1,43 @@
+:host {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #1e88e5;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    mat-form-field {
+      width: 100%;
+    }
+
+    button {
+      align-self: center;
+      width: 100%;
+    }
+  }
+
+  .helper-text {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+
+    a {
+      color: #1e88e5;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

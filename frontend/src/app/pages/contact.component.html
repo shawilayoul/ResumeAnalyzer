@@ -1,0 +1,28 @@
+<h1>Contact Us</h1>
+
+<p>If you have questions, feedback, or need support, feel free to reach out using the form below.</p>
+
+<form class="contact-form" #contactForm="ngForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput name="name" ngModel required=""/>
+
+    </mat-form-field>
+     <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" ngModel required email />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Message</mat-label>
+    <textarea matInput name="message" rows="5" ngModel required></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="contactForm">
+    Send Message
+  </button>
+
+</form>
+
+<section class="contact-info">
+  <p>Or email us directly at <a href="mailto:support@resume-analyzer.ai">support&#64;resume-analyzer.ai</a></p>
+</section>

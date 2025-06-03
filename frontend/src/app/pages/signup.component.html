@@ -1,0 +1,41 @@
+<h1>Create Account</h1>
+
+<form class="signup-form" #signupForm="ngForm" (ngSubmit)="onSignUp(signupForm)">
+  <mat-form-field appearance="outline">
+    <mat-label>Full Name</mat-label>
+    <input matInput name="name" ngModel required />
+<mat-error *ngIf="signupForm.controls?.['name']?.errors?.['required']">
+      Name is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" ngModel required email />
+    <mat-error *ngIf="signupForm.controls?.['email']?.errors?.['required']">
+      Email is required
+    </mat-error>
+    <mat-error *ngIf="signupForm.controls?.['email']?.errors?.['email']">
+      Invalid email format
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password" ngModel required minlength="6" />
+    <mat-error *ngIf="signupForm.controls?.['password']?.errors?.['required']">
+      Password is required
+    </mat-error>
+    <mat-error *ngIf="signupForm.controls?.['password']?.errors?.['minlength']">
+      Password must be at least 6 characters
+    </mat-error>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="signupForm.invalid">
+    Sign Up
+  </button>
+</form>
+
+<p class="helper-text">
+  Already have an account? <a routerLink="/login">Log in</a>
+</p>
